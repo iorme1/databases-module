@@ -1,0 +1,94 @@
+1.) Given the values table below, what data types do each of these values represent?
+
+Answer:
+      String
+      Integer
+      String
+      Float
+      Float
+
+2.) Explain in your own words when a database might be used. Explain when a text file might be used.
+
+Answer:
+    A text file can be used if you are not running multiple instances of a program at the same time.
+    If you run multiple instances of a program and both instances save data to the same text file
+    at the same time, then you run into problems. The first potential outcome is that one will fail
+    to update the file and the other will succeed. The other potential outcome is that the second
+    attempt to change the file will overwrite the previous attempt. A database can deal with multiple
+    applications accessing/updating files concurrently. Databases also give you the benefit of easily
+    searching for specific data.
+
+3.) Describe one difference between SQL and other programming languages.
+
+Answer:
+  SQL is declarative while most other programming languages are procedural. The difference
+  being that you tell SQL "what" you want versus needing to write "how" you want it in a programming
+  language.
+
+4.) In your own words, explain how the pieces of a database system fit together at a high level.
+
+Answer:
+  Related data is grouped together in a table. In this table, columns represent different
+  categories of data and rows represent each value of each data category for a specific unit.
+
+5.) Explain the meaning of table, row, column, and value.
+
+Answer:
+  A table is a group of related data. Columns are used to represent the value of specific types of data.
+  A row includes each category of data and represents a single unit's characteristics.
+
+6.) List 3 data types that can be used in a table.
+
+Answer:  INTEGER
+         CHARACTER
+         BOOLEAN
+
+
+7.) Given the payments table below, provide an English description and the results for the following queries:
+
+Answer:
+
+    - DESCRIPTION:   Return both the date and amount columns' values from the payments table.
+
+      RESULT:
+      date column: 5/1/2016, 5/10/2016, 5/15/2016, 5/23/2016
+      amount column: 1500.00, 37.00, 124.93, 54.72
+
+    - DESCRIPTION: Return any values greater than 500 in the payments table under the amounts column.
+
+      RESULT:
+      1500.00
+
+    - DESCRIPTION: Return all column values in the payments table where the value of the payee column
+      equals "Mega Foods".
+
+      RESULT:
+      5/15/2016, Mega Foods, 124.93, Groceries
+
+
+
+
+
+8.) Given the users table below, write the following SQL queries and their results:
+
+Select the email and sign-up date for the user named DeAndre Data.
+
+Answer:
+      SELECT email, signup
+      FROM users
+      WHERE name = 'DeAndre Data';
+
+
+Select the user ID for the user with email 'aleesia.algorithm@uw.edu'.
+
+Answer:
+      SELECT userid
+      FROM users
+      WHERE email = 'aleesia.algorithm@uw.edu';
+
+Select all the columns for the user ID equal to 4.
+
+Answer:
+      SELECT *
+      FROM users
+      WHERE userid = 4;
